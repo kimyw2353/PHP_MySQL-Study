@@ -33,14 +33,15 @@
     define('SPARKPRICE', 4);
 
     $totalamount = $tireqty * TIREPRICE
-                 + $oilqty * OILPRICE
-                 + $sparkqty * SPARKPRICE;
+                + $oilqty * OILPRICE
+                + $sparkqty * SPARKPRICE;
 
-    echo "Subtotal: $".number_format($totalamount,2)."<br />";
-    
-    $taxrate = 0.10;  // local sales tax is 10%
-    $totalamount = $totalamount * (1 + $taxrate);
-    echo "Total including tax: $".number_format($totalamount,2)."</p>";
+    echo "Subtotal : ".number_format($totalamount, 2)."<br />";
+
+    $taxrate = 0.10; //수수료 10%
+    $totalamount = $totalamount * (1+$taxrate);
+    echo "Total including tax : ".number_format($totalamount, 2)."</p>";
+
     ?>  
   </body>
 </html>
