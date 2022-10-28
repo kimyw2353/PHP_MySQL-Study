@@ -69,9 +69,9 @@
          exit;
        }
 
-       flock($fp, LOCK_EX);
+       //flock($fp, LOCK_EX);
        fwrite($fp, $outputstring, strlen($outputstring));
-       flock($fp, LOCK_UN);
+       //flock($fp, LOCK_UN);
        fclose($fp);
 
        echo "<p>Order written.</p>";
