@@ -11,6 +11,9 @@
 Icon
 
 
+/.idea
+.gitignore~
+
 # Thumbnails
 ._*
 
