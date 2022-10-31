@@ -61,7 +61,7 @@
                       ."\t". $address."\n";
 
        // open file for appending
-       @$fp = fopen("$document_root/../orders/orders.txt", 'ab');
+       @$fp = fopen("orders.txt", 'ab');
 
        if (!$fp) {
          echo "<p><strong> Your order could not be processed at this time.
@@ -69,9 +69,9 @@
          exit;
        }
 
-       //flock($fp, LOCK_EX);
+       flock($fp, LOCK_EX);
        fwrite($fp, $outputstring, strlen($outputstring));
-       //flock($fp, LOCK_UN);
+       flock($fp, LOCK_UN);
        fclose($fp);
 
        echo "<p>Order written.</p>";
