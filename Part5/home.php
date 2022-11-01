@@ -9,6 +9,22 @@
      and hope to hear from you soon.</p>
   </section>
 <?php
+    function increment($value, $amount = 1) {
+        $value += $amount;
+        echo $value;
+    }
+    //$value = 10;
+    //increment($value);
+    //echo $value;
+
+    function increment_v2(&$value, $amount = 1) {
+        $value += $amount;
+        echo $value;
+    }
+    $value = 10;
+    increment_v2($value);
+    echo $value;
+
   require('footer.php');
 ?>
 
